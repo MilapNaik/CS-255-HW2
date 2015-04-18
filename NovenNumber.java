@@ -3,9 +3,9 @@ public class NovenNumber {
     	  
     	  int p = 0, fin = 0;
     	  char cur;
-    	  boolean neg = false;
+    	  boolean neg = false; //Assume incoming string is positive
     	  
-    	  //check for negative
+    	  //check if negative
     	  if (s.charAt(0) == '-'){
     		  neg = true;
     		  p = 1;
@@ -48,7 +48,7 @@ public class NovenNumber {
       
       public static String toString(int a) {
     	  
-    	  int r;
+    	  int r; //remainder
     	  String fin = "", end = "";
     	  char n = '0';   
     	  boolean neg = false;

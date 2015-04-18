@@ -24,19 +24,21 @@ public class hw2
    {
       Scanner in = new Scanner(System.in);
 
-      String s;
-      int x, y, z;
+      String input;
+      int x, y, output;
 
       System.out.print ("Enter first Novendecimal number x = ");
-      s = in.next();
-      x = NovenNumber.parseNoven(s);  // Convert novendecimal number to binary
+      input = in.next();
+      x = NovenNumber.parseNoven(input);  // Convert novendecimal number to binary
 
       System.out.print ("Enter second Novendecimal number y = ");
-      s = in.next();
-      y = NovenNumber.parseNoven(s);  // Convert novendecimal number to binary
+      input = in.next();
+      y = NovenNumber.parseNoven(input);  // Convert novendecimal number to binary
 
-      z = x + y;
-      System.out.println ("x + y = " + NovenNumber.toString(z) );
+      output = x + y;
+      System.out.println ("x + y = " + NovenNumber.toString(output) );
+      
+      in.close(); //close scanner
    }
 }
 
