@@ -4,7 +4,7 @@
 // For hw2, you must write another program in file "NovenNumber.java"
 // that contains the static methods:
 //
-//         public static int parseNoven(String s)
+//         public static int parseNoven(String input)
 //         public static String toString(int a)
 //
 // Compile the program (after you have written "NovenNumber.java"
@@ -25,18 +25,18 @@ public class hw2
       Scanner in = new Scanner(System.in);
 
       String input;
-      int First, y, output;
+      int First, Second, output;
 
       System.out.print ("Enter first Novendecimal number First = ");
       input = in.next();
       First = NovenNumber.parseNoven(input);  // Convert novendecimal number to binary
 
-      System.out.print ("Enter second Novendecimal number y = ");
+      System.out.print ("Enter second Novendecimal number Second = ");
       input = in.next();
-      y = NovenNumber.parseNoven(input);  // Convert novendecimal number to binary
+      Second = NovenNumber.parseNoven(input);  // Convert novendecimal number to binary
 
-      output = First + y;
-      System.out.println ("First + y = " + NovenNumber.toString(output) );
+      output = First + Second;
+      System.out.println ("First + Second = " + NovenNumber.toString(output) );
       
       in.close(); //close scanner
    }
