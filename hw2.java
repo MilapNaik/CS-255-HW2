@@ -25,18 +25,18 @@ public class hw2
       Scanner in = new Scanner(System.in);
 
       String input;
-      int x, y, output;
+      int First, y, output;
 
-      System.out.print ("Enter first Novendecimal number x = ");
+      System.out.print ("Enter first Novendecimal number First = ");
       input = in.next();
-      x = NovenNumber.parseNoven(input);  // Convert novendecimal number to binary
+      First = NovenNumber.parseNoven(input);  // Convert novendecimal number to binary
 
       System.out.print ("Enter second Novendecimal number y = ");
       input = in.next();
       y = NovenNumber.parseNoven(input);  // Convert novendecimal number to binary
 
-      output = x + y;
-      System.out.println ("x + y = " + NovenNumber.toString(output) );
+      output = First + y;
+      System.out.println ("First + y = " + NovenNumber.toString(output) );
       
       in.close(); //close scanner
    }
