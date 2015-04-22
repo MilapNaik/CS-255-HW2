@@ -1,20 +1,21 @@
 public class NovenNumber {
       public static int parseNoven(String input) {
     	  
-    	  int p = 0, fin = 0;
+    	  int pos = 0; //position of iterating through string
+    	  int fin = 0;
     	  char cur;
     	  boolean neg = false; //Assume incoming string is positive
     	  
     	  //check if negative
     	  if (input.charAt(0) == '-'){
     		  neg = true;
-    		  p = 1;
+    		  pos = 1;
     	  }
     	  
     	//go through character of the string and multiply it by 19 * the predecessor digit
         do {
         	
-        	cur = input.charAt(p);
+        	cur = input.charAt(pos);
         	
         	if (cur >= '0' && cur <= '9')
         		fin = (cur - '0') + fin*19;
@@ -37,8 +38,8 @@ public class NovenNumber {
         	else if (cur == '?')
         		fin = 18 + fin*19;
 
-        	p++;
-        } while (p < input.length());
+        	pos++;
+        } while (pos < input.length());
         
         if (neg == false) //if positive
         	return fin;
